@@ -1,0 +1,34 @@
+body {
+    background-color:darkolivegreen;
+}
+
+/* .tip-form {
+    background-color: red;
+} */
+
+/* .container {
+    background-color: red;
+} */
+
+/* #tipInput {
+    background-color: beige; 
+} */
+
+.heading {
+    font-family: Georgia, serif;
+    text-decoration-color: beige,
+}
+
+.form-group {
+    font-family: Georgia, serif;
+}
+
+#total {
+    font-family: Georgia, serif;
+    /* background-color: darkolivegreen; */
+}
+
+.input-group {
+    font-family: Georgia, serif;
+    background-color: beige;
+}
