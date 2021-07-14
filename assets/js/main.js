@@ -2,6 +2,7 @@ console.log("Is this working");
 
 
 let billAmount = 1;
+let numberOfGuests = 4
 
 
 // get bill total from form input
