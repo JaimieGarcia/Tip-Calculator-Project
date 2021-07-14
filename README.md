@@ -7,7 +7,7 @@ Minimum requirements - Total bill, number of guests, and quality of service.
 - [x] Setup repo
 - [x] Setup project structure
 ***Front-end***
-- [ ] Add Bootstrap
+- [x] Add Bootstrap
 - [ ] 
 
 ***Back-end***
