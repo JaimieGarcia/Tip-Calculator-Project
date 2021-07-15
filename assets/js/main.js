@@ -55,21 +55,21 @@ console.log("Split " + numberOfGuests + " ways is:" + peopleSplit());
 //! add stuff to the frontend
 
 // Bill 
-const billTotal = document.getElementById("bill-amount");
-billTotal.innerHTML = billAmount;
+//const billTotal = document.getElementById("bill-amount");
+//billTotal.innerHTML = billAmount;
 
 // gratuity percent %%% 
 //const tipPrecentage = document.getElementById("gratuity-percent");
 //tipPrecentage.innerHTML = gratuityPercent();
 
 // gratuity amount $$$ 
-const gratuityAmount = document.getElementById("gratuity-amount");
+const gratuityAmount = document.getElementById("tipAmount");
 gratuityAmount.innerHTML = calculateGratuity();
 
 //total with tip
-const total = document.getElementById("total");
+const total = document.getElementById("totalBillWithTip");
 total.innerHTML = totalWithGrat(billAmount);
 
 //total with tip split between party
-const split = document.getElementById("guest-split");
-split.innerHTML = peopleSplit();
+//const split = document.getElementById("guest-split");
+//split.innerHTML = peopleSplit();
