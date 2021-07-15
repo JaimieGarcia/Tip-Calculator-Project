@@ -1,8 +1,8 @@
 console.log("Is this working");
 
-
+//these shoudl be the user inputs for the front end form stuff
 let billAmount = 100;
-let numberOfGuests = 4;
+let numberOfGuests = 8;
 let gratuity = 20;
 
 
@@ -15,23 +15,29 @@ function enterBill() {
     //console.log("bill amount: " + billAmount);
 }
 
-function setGratuityPercent() {
+// use the tip % and turn it into a decimal eg 20% = 0.2
+function setGratuityDecimal() {
     return (gratuity / 100)
 }
 
 function gratuityPercent() {
-    return (setGratuityPercent() * 100);
+    return (setGratuityDecimal() * 100);
 }
 
 
-// figure out gratuity 
+// figure out gratuity bill total x %decimal 
 function calculateGratuity() {
-    return (billAmount * setGratuityPercent());
+    return (billAmount * setGratuityDecimal());
 }
 
-
+// 
 function totalWithGrat(amount) {
     return calculateGratuity() + amount;
+}
+
+// split the total with tip by the 
+function peopleSplit() {
+    return (totalWithGrat(billAmount) / numberOfGuests);
 }
 
 
@@ -40,9 +46,10 @@ function totalWithGrat(amount) {
 console.log("bill amount: " + billAmount);
 console.log("Thar be " + numberOfGuests + " guests");
 console.log("Gratuity(%) is: " + gratuityPercent() + "%");
-console.log("Gratuity(math stuff) is: " + setGratuityPercent());
+console.log("Gratuity(math stuff) is: " + setGratuityDecimal());
 console.log("Gratuity($) is: $" + calculateGratuity());
 console.log("Your total including gratuity is:" + totalWithGrat(billAmount));
+console.log("Split " + numberOfGuests + " ways is:" + peopleSplit());
 
 
 
@@ -57,13 +64,17 @@ const guestNum = document.getElementById("guest-number");
 guestNum.innerHTML = numberOfGuests;
 
 // gratuity percent %%% 
-const gratuityPrecentage = document.getElementById("gratuity-percent");
-gratuityPrecentage.innerHTML = gratuityPercent();
+//const tipPrecentage = document.getElementById("gratuity-percent");
+//tipPrecentage.innerHTML = gratuityPercent();
 
 // gratuity amount $$$ 
 const gratuityAmount = document.getElementById("gratuity-amount");
 gratuityAmount.innerHTML = calculateGratuity();
 
-//total 
+//total with tip
 const total = document.getElementById("total");
 total.innerHTML = totalWithGrat(billAmount);
+
+//total with tip split between party
+const split = document.getElementById("guest-split");
+split.innerHTML = peopleSplit();
