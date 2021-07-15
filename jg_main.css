@@ -1,5 +1,5 @@
-body {
-    background-color:darkolivegreen;
+.body {
+    background-color: red;
 }
 
 /* .tip-form {
@@ -14,7 +14,7 @@ body {
     background-color: beige; 
 } */
 
-.heading {
+/* .heading {
     font-family: Georgia, serif;
     text-decoration-color: beige,
 }
@@ -23,12 +23,12 @@ body {
     font-family: Georgia, serif;
 }
 
-#total {
+/* #total {
     font-family: Georgia, serif;
-    /* background-color: darkolivegreen; */
-}
+    /* background-color: darkolivegreen;
+} */ 
 
-.input-group {
+/* .input-group {
     font-family: Georgia, serif;
     background-color: beige;
-}
+}  */
