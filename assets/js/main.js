@@ -5,8 +5,18 @@ let billAmount = 300;
 let numberOfGuests = 8;
 let gratuity = 20;
 
+// gets the total from the input displays it on the page
+// imedietly resets 
+const input = document.querySelector('input');
+const totalBillWithTip = document.getElementById('totalBillWithTip');
 
-//! Functions
+input.addEventListener('change', updateValue);
+
+function updateValue(e) {
+    totalBillWithTip.textContent = e.target.value;
+}
+
+
 // get bill total from form input
 function enterBill() {
     let billAmount = document.getElementById("billAmountForm").value;
@@ -54,6 +64,7 @@ console.log("Split " + numberOfGuests + " ways is:" + peopleSplit());
 
 //! add stuff to the frontend
 
+
 // Bill 
 //const billTotal = document.getElementById("bill-amount");
 //billTotal.innerHTML = billAmount;
@@ -67,8 +78,8 @@ const gratuityAmount = document.getElementById("tipAmount");
 gratuityAmount.innerHTML = calculateGratuity();
 
 //total with tip
-const total = document.getElementById("totalBillWithTip");
-total.innerHTML = totalWithGrat(billAmount);
+//const total = document.getElementById("totalBillWithTip");
+//total.innerHTML = totalWithGrat(billAmount);
 
 //total with tip split between party
 //const split = document.getElementById("guest-split");
