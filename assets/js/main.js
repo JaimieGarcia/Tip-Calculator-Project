@@ -3,7 +3,7 @@ console.log("Is this working");
 
 let billAmount = 100;
 let numberOfGuests = 4;
-let gratuity = 20;
+let gratuity = 15;
 
 
 
@@ -24,7 +24,7 @@ function gratuityPercent() {
 }
 
 
-// figure out gratuity 
+// figure out gratuity - 20%
 function calculateGratuity() {
     return (billAmount * setGratuityPercent());
 }
@@ -42,7 +42,8 @@ console.log("Thar be " + numberOfGuests + " guests");
 console.log("Gratuity(%) is: " + gratuityPercent() + "%");
 console.log("Gratuity(math stuff) is: " + setGratuityPercent());
 console.log("Gratuity($) is: $" + calculateGratuity());
-console.log("Your total including gratuity is:" + totalWithGrat(billAmount));
+console.log("Bill amount: " + totalWithGrat());
+console.log("Your total including gratuity is:" + `totalWithGrat(billAmount)`);
 
 
 
@@ -52,13 +53,9 @@ console.log("Your total including gratuity is:" + totalWithGrat(billAmount));
 const billTotal = document.getElementById("bill-amount");
 billTotal.innerHTML = billAmount;
 
-// Guest # 
-const guestNum = document.getElementById("guest-number");
-guestNum.innerHTML = numberOfGuests;
-
 // gratuity percent %%% 
-const gratuityPrecentage = document.getElementById("gratuity-percent");
-gratuityPrecentage.innerHTML = gratuityPercent();
+//const gratuityPrecent = document.getElementById("gratuity-percent");
+//gratuityPrecent.innerHTML = setGratuityPercent();
 
 // gratuity amount $$$ 
 const gratuityAmount = document.getElementById("gratuity-amount");
