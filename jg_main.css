@@ -1,34 +1,31 @@
-.body {
-    background-color: red;
+body {
+    background-color: rgb(206, 229, 208);
+    color: rgb(94, 69, 75);
+    font-family: Georgia, serif;
 }
 
-/* .tip-form {
-    background-color: red;
-} */
+.container {
+    border-style: double;
+    border-color: rgb(243, 240, 215);
+}
 
-/* .container {
-    background-color: red;
-} */
+.form-control {
+    background-color: rgb(243, 240, 215);
+}
 
-/* #tipInput {
-    background-color: beige; 
-} */
-
-/* .heading {
-    font-family: Georgia, serif;
-    text-decoration-color: beige,
+.heading {
+    color: rgb(94, 69, 75);
 }
 
 .form-group {
-    font-family: Georgia, serif;
+    background-color: white;
 }
 
-/* #total {
-    font-family: Georgia, serif;
-    /* background-color: darkolivegreen;
-} */ 
+hr {
+    color:rgb(94, 69, 75); 
+}
 
-/* .input-group {
-    font-family: Georgia, serif;
-    background-color: beige;
-}  */
+.tipAmount {
+        background-color: red;
+} 
+
