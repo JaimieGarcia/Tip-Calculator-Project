@@ -1,31 +1,41 @@
 body {
-    background-color: rgb(206, 229, 208);
-    color: rgb(94, 69, 75);
-    font-family: Georgia, serif;
+    background-color: #C2B8A3;
+    color: #A19882;;
+    font-family: 'Baloo 2', cursive;
 }
 
 .container {
     border-style: double;
-    border-color: rgb(243, 240, 215);
+    border-color: #E6DDC6; 
 }
 
+/* Input boxes at top of calculator */
 .form-control {
-    background-color: rgb(243, 240, 215);
+    background-color: #FEF7DC;
 }
 
+/* Tip Calculator Heading */
 .heading {
-    color: rgb(94, 69, 75);
+    color: #A19882;
 }
 
+/* Boxes with prompts */
 .form-group {
-    background-color: white;
+    background-color: #ffffff;
 }
 
+/* Line between calculator and total */
 hr {
-    color:rgb(94, 69, 75); 
+    color: #E6DDC6; 
 }
 
-.tipAmount {
-        background-color: red;
+/* Tip Amount  */
+#tipAmount {
+    background-color: #FEF7DC;
+}
+
+/* Total Bill with Tip */
+#totalBillWithTip {
+    background-color: #FEF7DC;
 } 
 

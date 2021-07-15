@@ -7,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tip Calculator Group Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
     <link 
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
         rel="stylesheet" 
@@ -29,18 +32,17 @@
             <!-- How much was the total? -->
             <div class="form-group">
                 <div class="input-group">
-                    <span class="input-group-addon">How much was the total?: </span>
+                    <span class="input-group-addon">How much was the total? </span>
                     <input type="number" 
                     class="form-control" 
-                    id="billTotal" 
-                    placeholder="Bill Amount">
+                    id="billTotal">
                 </div>
             </div>
             
             <!-- How much would you like to tip? -->
             <div class="form-group tipPersent">
                 <div class="input-group">
-                    <label for="">How much would you like to tip?: </label>
+                    <label for="">How much would you like to tip? </label>
                     <input type="range" class="form-control" id="tipInput" value="0">
                     <span class="input-group-addon" id="tipOutput"></span>
                 </div>
@@ -53,7 +55,7 @@
           
             <!-- Tip Amount -->
             <div id="total" class="pt-3">
-                <h5>Total</h5>
+                <h5>Totals</h5>
                 <div class="form-group">
                     <div class="input-group">
                         <span class="input-group-addon">Tip Amount:</span>
