@@ -1,0 +1,41 @@
+body {
+    background-color: #C2B8A3;
+    color: #A19882;;
+    font-family: 'Baloo 2', cursive;
+}
+
+.container {
+    border-style: double;
+    border-color: #E6DDC6; 
+}
+ 
+/* Input boxes at top of calculator */
+.form-control {
+    background-color: #FEF7DC;
+}
+
+/* Tip Calculator Heading */
+.heading {
+    color: #A19882;
+}
+
+/* Boxes with prompts */
+.form-group {
+    background-color: #ffffff;
+}
+
+/* Line between calculator and total */
+hr {
+    color: #E6DDC6; 
+}
+
+/* Tip Amount  */
+#tipAmount {
+    background-color: #FEF7DC;
+}
+
+/* Total Bill with Tip */
+#totalBillWithTip {
+    background-color: #FEF7DC;
+} 
+

@@ -58,10 +58,6 @@ console.log("Split " + numberOfGuests + " ways is:" + peopleSplit());
 const billTotal = document.getElementById("bill-amount");
 billTotal.innerHTML = billAmount;
 
-// Guest # 
-const guestNum = document.getElementById("guest-number");
-guestNum.innerHTML = numberOfGuests;
-
 // gratuity percent %%% 
 //const tipPrecentage = document.getElementById("gratuity-percent");
 //tipPrecentage.innerHTML = gratuityPercent();
