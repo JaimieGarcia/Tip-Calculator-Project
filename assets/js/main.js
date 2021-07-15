@@ -1,10 +1,9 @@
 console.log("Is this working");
 
 //these shoudl be the user inputs for the front end form stuff
-let billAmount = 100;
+let billAmount = 300;
 let numberOfGuests = 8;
 let gratuity = 20;
-
 
 
 //! Functions
