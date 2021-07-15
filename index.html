@@ -21,18 +21,15 @@
         <div class="row">
             <div class="col-md-6 mx-auto">
                 <div class="card card-body text-center mt-6">
-
                     <h1 class="heading display-5 pb-3">Tip Calculator</h1>
-
                     <form id="tip-form">
-
                         <!-- How much was the total? -->
-                        <div class="form-group">
+                        <form class="form-group" onchange="updateValue();">
                             <div class="input-group">
                                 <span class="input-group-addon">How much was the total? </span>
-                                <input type="number" class="form-control" id="billTotal">
+                                <input type="number" class="form-control" id="billTotal"/>
                             </div>
-                        </div>
+                        </form>
 
                         <!-- How much would you like to tip? -->
                         <div class="form-group tipPersent">
@@ -63,7 +60,7 @@
                             <div class="input-group">
                                 <span class="input-group-addon">Total Bill with Tip: </span>
                                 <span id="totalBillWithTip">TOTAL WITH TIP HERE</span>
-                                
+
                             </div>
                         </div>
 
