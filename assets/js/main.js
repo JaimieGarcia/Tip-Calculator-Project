@@ -7,6 +7,12 @@ let billAmount = 100;
 //let billAmount = document.getElementById("billTotal").value;
 
 
+
+let tipPerButton = 20;
+
+console.log(tipPerButton);
+
+
 // gets the total from the input displays it on the page
 // imedietly resets 
 const input = document.querySelector('input');
@@ -18,6 +24,18 @@ function updateValue(e) {
     totalBillWithTip.textContent = e.target.value;
 }
 
+
+var form = document.getElementById("billTotal");
+
+function handleForm(event) {
+    event.preventDefault();
+}
+form.addEventListener('submit', handleForm);
+
+
+function eventTest(event, inputText) {
+    event.preventDefault();
+}
 
 // get bill total from form input
 function enterBill() {
