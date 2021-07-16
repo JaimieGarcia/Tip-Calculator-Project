@@ -22,29 +22,7 @@
         <div class="row vertical-center">
             <div class="col-md-6 mx-auto">
                 <div class="card card-body text-center mt-6">
-                    <h1 class="heading display-5 pb-3">Tip Calculator</h1>
-                    <section>
-                        <form id="total-form">
-                            <!-- How much was the total? -->
-                            <div class="">How much was the total? </div>
-                            <form class="form-group">
-                                <div class="input-group">
-                                    <input type="number" name="total" class="form-control text-center" id="billTotal"
-                                        onsubmit="eventTest()" />
-                                </div>
-                            </form>
-                    </section>
 
-                    <section>
-                        <form id="guest-form">
-                            <!-- How much was the total? -->
-                            <div class="">How many guests? </div>
-                            <form class="form-group">
-                                <div class="input-group">
-                                    <input type="number" class="form-control text-center" id="guests" name="Guests" />
-                                </div>
-                            </form>
-                    </section>
 
 
                     <!-- How much would you like to tip? -->
@@ -63,39 +41,16 @@
                                     <input type="radio" class="btn-check" name="btnradio" id="10per" autocomplete="off">
                                     <label class="btn btn-outline-dark" for="10per">10%</label>
 
-                                    <input type="radio" class="btn-check" name="btnradio" id="custom"
-                                        autocomplete="off">
-                                    <label class="btn btn-outline-dark" for="custom">Custom</label>
                                 </div>
                             </div>
                         </div>
-                        <div class="d-grid pt-5 gap-2">
-                            <button type="button" class="btn btn-dark" id="20Per">Calculate</button>
-                        </div>
+
                     </section>
 
                     <!-- Line between calculator and total -->
                     <hr>
 
-                    <!-- Totals Section -->
-                    <div id="total" class="pt-3">
-                        <h5>Totals</h5>
-                        <section>
-                            <h6 class="input-group-addon">Number of guests</h6>
-                            <div id="groupNumber">GROUP NUMBER</div>
-                        </section>
-
-                        <h6 class="input-group-addon">Tip Amount:</h6>
-                        <div id="tipAmount">TIP AMOUNT HERE</div>
-                        </section>
-
-
-                        <!-- Total Bill with Tip -->
-                        <section>
-                            <h6 class="input-group-addon">Total Bill with Tip: </h6>
-                            <div id="totalBillWithTip">TOTAL WITH TIP HERE</div>
-                        </section>
-                    </div>
+                    <h1 id="result">TIP%</h1>
                 </div>
             </div>
         </div>
@@ -108,7 +63,6 @@
     </script>
 
     <!-- JavaScript code -->
-    <script src="./assets/js/main.js"></script>
     <script src="./assets/js/tip-buttons.js"></script>
 </body>
 
