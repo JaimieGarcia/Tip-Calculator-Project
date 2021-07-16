@@ -32,11 +32,25 @@ hr {
 /* Tip Amount  */
 #tipAmount {
     background-color: #FEF7DC;
+    border: 0.1px solid #A19882;
+    border-radius: 4px;
+    padding: 4px 0px 4px 0px;
 }
 
 /* Total Bill with Tip */
 #totalBillWithTip {
     background-color: #FEF7DC;
+    border: 0.1px solid #A19882;
+    border-radius: 4px;
+    padding: 4px 0px 4px 0px;
+} 
+
+/* Total Bill with Tip */
+#groupNumber {
+    background-color: #FEF7DC;
+    border: 0.1px solid #A19882;
+    border-radius: 4px;
+    padding: 4px 0px 4px 0px;
 } 
 
 .vertical-center {

@@ -29,7 +29,7 @@
                             <div class="">How much was the total? </div>
                             <form class="form-group">
                                 <div class="input-group">
-                                    <input type="number" class="form-control text-center" id="billTotal"
+                                    <input type="number" name="total" class="form-control text-center" id="billTotal"
                                         onsubmit="eventTest()" />
                                 </div>
                             </form>
@@ -41,8 +41,7 @@
                             <div class="">How many guests? </div>
                             <form class="form-group">
                                 <div class="input-group">
-                                    <input type="number" class="form-control text-center" id="guestTotal"
-                                        onsubmit="eventTest()" />
+                                    <input type="number" class="form-control text-center" id="guests" name="Guests"/>
                                 </div>
                             </form>
                     </section>
@@ -82,8 +81,12 @@
                     <div id="total" class="pt-3">
                         <h5>Totals</h5>
                         <section>
-                            <h6 class="input-group-addon">Tip Amount:</h6>
-                            <div id="tipAmount">TIP AMOUNT HERE</div>
+                            <h6 class="input-group-addon">Number of guests</h6>
+                            <div id="groupNumber">GROUP NUMBER</div>
+                        </section>
+
+                        <h6 class="input-group-addon">Tip Amount:</h6>
+                        <div id="tipAmount">TIP AMOUNT HERE</div>
                         </section>
 
 

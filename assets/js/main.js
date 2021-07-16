@@ -1,18 +1,32 @@
 console.log("Is this working");
 
-//these shoudl be the user inputs for the front end form stuff
-let numberOfGuests = 4;
+//! these shoudl be the user inputs for the front end form stuff
+let numberOfGuests = 1;
 let gratuity = 20;
 let billAmount = 100;
 //let billAmount = document.getElementById("billTotal").value;
-
-
-
 let tipPerButton = 20;
 
-console.log(tipPerButton);
 
 
+
+/* event listener */
+// TODO: Got this working in a codepen it aint workign herer
+// https://codepen.io/BorkStick/pen/PomprJJ
+
+document.getElementsByName("Guests")[0].addEventListener('keyup', doThing);
+
+/* function */
+function doThing() {
+    const guests = document.getElementById("guests");
+    guests.innerHTML = this.value;
+    let numberOfGuests = this.value;
+}
+
+
+
+
+//! Functions
 // gets the total from the input displays it on the page
 // imedietly resets 
 const input = document.querySelector('input');
@@ -79,7 +93,7 @@ console.log("Gratuity(math stuff) is: " + setGratuityDecimal());
 console.log("Gratuity($) is: $" + calculateGratuity());
 console.log("Your total including gratuity is:" + totalWithGrat(billAmount));
 console.log("Split " + numberOfGuests + " ways is:" + peopleSplit());
-
+console.log(tipPerButton);
 
 
 //! add stuff to the frontend
@@ -94,12 +108,16 @@ console.log("Split " + numberOfGuests + " ways is:" + peopleSplit());
 //tipPrecentage.innerHTML = gratuityPercent();
 
 // gratuity amount $$$ 
-const gratuityAmount = document.getElementById("tipAmount");
-gratuityAmount.innerHTML = calculateGratuity();
+//const gratuityAmount = document.getElementById("tipAmount");
+//gratuityAmount.innerHTML = calculateGratuity();
 
 //total with tip
 //const total = document.getElementById("totalBillWithTip");
 //total.innerHTML = totalWithGrat(billAmount);
+
+
+
+
 
 //total with tip split between party
 //const split = document.getElementById("guest-split");
