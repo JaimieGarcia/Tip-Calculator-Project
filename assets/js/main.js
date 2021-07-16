@@ -14,14 +14,14 @@ let tipPerButton = 20;
 // TODO: Got this working in a codepen it aint workign herer
 // https://codepen.io/BorkStick/pen/PomprJJ
 
-document.getElementsByName("Guests")[0].addEventListener('keyup', doThing);
+// document.getElementsByName("Guests")[0].addEventListener('keyup', doThing);
 
-/* function */
-function doThing() {
-    const guests = document.getElementById("guests");
-    guests.innerHTML = this.value;
-    let numberOfGuests = this.value;
-}
+// /* function */
+// function doThing() {
+//     const guests = document.getElementById("guests");
+//     guests.innerHTML = this.value;
+//     let numberOfGuests = this.value;
+// }
 
 
 
@@ -39,17 +39,17 @@ function updateValue(e) {
 }
 
 
-var form = document.getElementById("billTotal");
+// var form = document.getElementById("billTotal");
 
-function handleForm(event) {
-    event.preventDefault();
-}
-form.addEventListener('submit', handleForm);
+// function handleForm(event) {
+//     event.preventDefault();
+// }
+// form.addEventListener('submit', handleForm);
 
 
-function eventTest(event, inputText) {
-    event.preventDefault();
-}
+// function eventTest(event, inputText) {
+//     event.preventDefault();
+// }
 
 // get bill total from form input
 function enterBill() {

@@ -41,7 +41,7 @@
                             <div class="">How many guests? </div>
                             <form class="form-group">
                                 <div class="input-group">
-                                    <input type="number" class="form-control text-center" id="guests" name="Guests" />
+                                    <input type="number" class="form-control text-center" placeholder="1" id="numOfGuestsInput" name="Guests" />
                                 </div>
                             </form>
                     </section>
@@ -54,10 +54,10 @@
                             <div class="input-group d-flex justify-content-center" id="tipButtons">
                                 <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
                                     <input type="radio" class="btn-check" name="btnradio" id="20per" autocomplete="off"
-                                        checked>
+                                        >
                                     <label class="btn btn-outline-dark" for="20per">20%</label>
 
-                                    <input type="radio" class="btn-check" name="btnradio" id="15per" autocomplete="off">
+                                    <input type="radio" class="btn-check" name="btnradio" id="15per" autocomplete="off" checked>
                                     <label class="btn btn-outline-dark" for="15per">15%</label>
 
                                     <input type="radio" class="btn-check" name="btnradio" id="10per" autocomplete="off">
@@ -84,16 +84,16 @@
                             <div id="numOfGuestsOutput"># OF GUESTS</div>
                         </section>
 
-                        <section>
-                            <h6 class="input-group-addon">Tip Amount:</h6>
-                            <div id="tipAmount">TIP AMOUNT HERE</div>
-                        </section>
-
+                        
                         <section>
                             <h6 class="input-group-addon">Tip %:</h6>
                             <div id="tipPercentOutput">TIP %</div>
                         </section>
-
+                        
+                        <section>
+                            <h6 class="input-group-addon">Tip Amount:</h6>
+                            <div id="tipAmount">TIP AMOUNT HERE</div>
+                        </section>
 
                         <!-- Total Bill with Tip -->
                         <section>
