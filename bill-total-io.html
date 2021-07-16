@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator Group Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="./assets/css/main.css" />
+</head>
+
+<body>
+
+    <div class="container ">
+        <div class="row vertical-center">
+            <div class="col-md-6 mx-auto">
+                <div class="card card-body text-center mt-6">
+                    <section>
+                        <form id="total-form">
+                            <!-- How much was the total? -->
+                            <div class="">How much was the total? </div>
+                            <form class="form-group">
+                                <div class="input-group">
+                                    <input type="number" name="total" class="form-control text-center" id="billTotalInput"/>
+                                </div>
+                            </form>
+                    </section>
+
+
+
+                    <!-- Line between calculator and total -->
+                    <hr>
+
+                    <!-- Totals Section -->
+                    <div id="totals" class="pt-3">
+                        <h5>Totals</h5>
+                        <section>
+                            <h6 class="input-group-addon">Bill Total:</h6>
+                            <h3 id="billTotalOutput">BILL TOTAL</h3>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap code -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+
+    <!-- JavaScript code -->
+    <script src="./assets/js/bill-total-io.js"></script>
+</body>
+
+</html>
