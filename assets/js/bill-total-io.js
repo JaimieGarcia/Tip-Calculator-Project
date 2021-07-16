@@ -1,5 +1,5 @@
-var inputBox = document.getElementById('billTotalInput');
+var totalInputBox = document.getElementById('billTotalInput');
 
-inputBox.onkeyup = function(){
-    document.getElementById('billTotalOutput').innerHTML = "$" + inputBox.value;
+totalInputBox.onkeyup = function(){
+    document.getElementById('billTotalOutput').innerHTML = "$" + totalInputBox.value;
 }

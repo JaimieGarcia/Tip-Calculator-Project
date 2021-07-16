@@ -1,5 +1,5 @@
-var inputBox = document.getElementById('numOfGuestsInput');
+var guestInputBox = document.getElementById('numOfGuestsInput');
 
-inputBox.onkeyup = function(){
-    document.getElementById('numOfGuestsOutput').innerHTML = inputBox.value;
+guestInputBox.onkeyup = function(){
+    document.getElementById('numOfGuestsOutput').innerHTML = guestInputBox.value;
 }

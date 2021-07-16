@@ -29,8 +29,8 @@
                             <div class="">How much was the total? </div>
                             <form class="form-group">
                                 <div class="input-group">
-                                    <input type="number" name="total" class="form-control text-center" id="billTotal"
-                                        onsubmit="eventTest()" />
+                                    <input type="number" name="total" class="form-control text-center"
+                                        id="billTotalInput" />
                                 </div>
                             </form>
                     </section>
@@ -63,15 +63,10 @@
                                     <input type="radio" class="btn-check" name="btnradio" id="10per" autocomplete="off">
                                     <label class="btn btn-outline-dark" for="10per">10%</label>
 
-                                    <input type="radio" class="btn-check" name="btnradio" id="custom"
-                                        autocomplete="off">
-                                    <label class="btn btn-outline-dark" for="custom">Custom</label>
                                 </div>
                             </div>
                         </div>
-                        <div class="d-grid pt-5 gap-2">
-                            <button type="button" class="btn btn-dark" id="20Per">Calculate</button>
-                        </div>
+
                     </section>
 
                     <!-- Line between calculator and total -->
@@ -81,12 +76,22 @@
                     <div id="total" class="pt-3">
                         <h5>Totals</h5>
                         <section>
-                            <h6 class="input-group-addon">Number of guests</h6>
-                            <div id="groupNumber">GROUP NUMBER</div>
+                            <h6 class="input-group-addon">Bill Total:</h6>
+                            <div id="billTotalOutput">BILL TOTAL</div>
+                        </section>
+                        <section>
+                            <h6 class="input-group-addon">Total Guests:</h6>
+                            <div id="numOfGuestsOutput"># OF GUESTS</div>
                         </section>
 
-                        <h6 class="input-group-addon">Tip Amount:</h6>
-                        <div id="tipAmount">TIP AMOUNT HERE</div>
+                        <section>
+                            <h6 class="input-group-addon">Tip Amount:</h6>
+                            <div id="tipAmount">TIP AMOUNT HERE</div>
+                        </section>
+
+                        <section>
+                            <h6 class="input-group-addon">Tip %:</h6>
+                            <div id="tipPercentOutput">TIP %</div>
                         </section>
 
 
@@ -109,7 +114,10 @@
 
     <!-- JavaScript code -->
     <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/bill-total-io.js"></script>
+    <script src="./assets/js/num-of-guests.js"></script>
     <script src="./assets/js/tip-buttons.js"></script>
+
 </body>
 
 </html>

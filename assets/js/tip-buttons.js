@@ -1,4 +1,4 @@
-let result = document.querySelector('#result');
+let result = document.querySelector('#tipPercentOutput');
 document.body.addEventListener('change', function (e) {
     let target = e.target;
     let message;
