@@ -24,49 +24,53 @@
                 <div class="card card-body text-center mt-6">
                     <h1 class="heading display-5 pb-3">Tip Calculator</h1>
                     <section>
-                        <form id="total-form">
+                        <form id="tip-form" onsubmit="return false">
                             <!-- How much was the total? -->
                             <div class="">How much was the total? </div>
-                            <form class="form-group">
-                                <div class="input-group">
-                                    <input type="number" name="total" class="form-control text-center"
-                                        id="billTotalInput" />
-                                </div>
-                            </form>
+
+                            <div class="input-group">
+                                <input type="number" name="total" class="form-control text-center"
+                                    id="billTotalInput" />
+                            </div>
+
                     </section>
 
+
+
                     <section>
-                        <form id="guest-form">
-                            <!-- How much was the total? -->
-                            <div class="">How many guests? </div>
-                            <form class="form-group">
-                                <div class="input-group">
-                                    <input type="number" class="form-control text-center" placeholder="1" id="numOfGuestsInput" name="Guests" />
-                                </div>
-                            </form>
+
+                        <!-- How much was the total? -->
+                        <div class="">How many guests? </div>
+
+                        <div class="input-group">
+                            <input type="number" class="form-control text-center" placeholder="1" id="numOfGuestsInput"
+                                name="Guests" />
+                        </div>
+
                     </section>
 
 
                     <!-- How much would you like to tip? -->
-                    <section class="tip-buttons">
+                    <div class="tip-buttons">
                         <div class="form-group pt-4">
                             <div>How much would you like to tip? </div>
                             <div class="input-group d-flex justify-content-center" id="tipButtons">
                                 <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                                    <input type="radio" class="btn-check" name="btnradio" id="20per" autocomplete="off"
-                                        >
+                                    <input type="radio" class="btn-check" name="btnradio" id="20per" value="20" autocomplete="off">
                                     <label class="btn btn-outline-dark" for="20per">20%</label>
 
-                                    <input type="radio" class="btn-check" name="btnradio" id="15per" autocomplete="off" checked>
-                                    <label class="btn btn-outline-dark" for="15per">15%</label>
+                                    <input type="radio" class="btn-check" name="btnradio" id="15per" value="15" autocomplete="off"
+                                        checked>
+                                    <label class="btn btn-outline-dark" for="15per" >15%</label>
 
-                                    <input type="radio" class="btn-check" name="btnradio" id="10per" autocomplete="off">
-                                    <label class="btn btn-outline-dark" for="10per">10%</label>
+                                    <input type="radio" class="btn-check" name="btnradio" id="10per" value="10" autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="10per" >10%</label>
 
                                 </div>
                             </div>
                         </div>
-
+                    </div>
+                    </form>
                     </section>
 
                     <!-- Line between calculator and total -->
@@ -77,19 +81,19 @@
                         <h5>Totals</h5>
                         <section>
                             <h6 class="input-group-addon">Bill Total:</h6>
-                            <div id="billTotalOutput">BILL TOTAL</div>
+                            <div id="billTotalOutput">$0.00</div>
                         </section>
                         <section>
                             <h6 class="input-group-addon">Total Guests:</h6>
                             <div id="numOfGuestsOutput"># OF GUESTS</div>
                         </section>
 
-                        
+
                         <section>
                             <h6 class="input-group-addon">Tip %:</h6>
                             <div id="tipPercentOutput">TIP %</div>
                         </section>
-                        
+
                         <section>
                             <h6 class="input-group-addon">Tip Amount:</h6>
                             <div id="tipAmount">TIP AMOUNT HERE</div>
@@ -113,10 +117,11 @@
     </script>
 
     <!-- JavaScript code -->
-    <script src="./assets/js/main.js"></script>
-    <script src="./assets/js/bill-total-io.js"></script>
-    <script src="./assets/js/num-of-guests.js"></script>
-    <script src="./assets/js/tip-buttons.js"></script>
+    <!-- <script src="./assets/js/main.js"></script> -->
+    <script src="./assets/js/tip-cal.js"></script>
+    <!-- <script src="./assets/js/bill-total-io.js"></script> -->
+    <!-- <script src="./assets/js/num-of-guests.js"></script> -->
+    <!-- <script src="./assets/js/tip-buttons.js"></script> -->
 
 </body>
 
