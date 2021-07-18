@@ -71,11 +71,13 @@ document.body.addEventListener('change', (e) => {
 
 console.log("test3 value " + tipValue);
 
-// calculate tip amount  100 * 0.15
+//Todo calculate tip amount  100 * 0.15
 let totalTipBox = document.getElementById('tipAmountOutput');
 document.getElementById('tipAmountOutput').innerHTML = "$" + billAmount * tipValue;
 
 
-// calculate total + tip 100 + 15
+//Todo calculate total + tip 100 + 15
 let totalOutputBox = document.getElementById('totalBillWithTip');
 document.getElementById('totalBillWithTip').innerHTML = 100 + tipValue;
+
+//Todo calculate tip if there is more than 1 person
