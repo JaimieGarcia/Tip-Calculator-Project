@@ -73,11 +73,14 @@ console.log("test3 value " + tipValue);
 
 //Todo calculate tip amount  100 * 0.15
 let totalTipBox = document.getElementById('tipAmountOutput');
-document.getElementById('tipAmountOutput').innerHTML = "$" + billAmount * tipValue;
+document.getElementById('tipAmountOutput').innerHTML = "$" + window.billAmount * window.tipValue;
+console.log("calculate tip amount");
+console.log(window.billAmount * window.tipValue);
 
-
-//Todo calculate total + tip 100 + 15
+//Todo calculate total + tip 100 + 15 = 115
 let totalOutputBox = document.getElementById('totalBillWithTip');
-document.getElementById('totalBillWithTip').innerHTML = 100 + tipValue;
+document.getElementById('totalBillWithTip').innerHTML = 100 + window.tipValue;
+console.log("calculate total + tip");
+console.log(billAmount * tipValue);
 
-//Todo calculate tip if there is more than 1 person
+//Todo calculate tip if there is more than 1 person tip / people 15 / 2 = 7.50
