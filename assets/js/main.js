@@ -44,13 +44,15 @@ guestInputBox.onchange = () => {
     document.getElementById('numOfGuestsOutput').innerHTML = guestInputBox.value;
     // if there is an value in the input 
     if (guestInputBox.value === "") {
-        numberOfGuestsResults = guestInputBox.value;
-
+        numberOfGuestsResults = 1;
+        console.log("should be just 1 guest " + numberOfGuestsResults);
+        
     }
-    //if its blank use this 
+    //if more than 1
     else {
         //guestInputBox = 1;
-        //numberOfGuests = 1;
+        numberOfGuestsResults = guestInputBox.value;
+        console.log("should list out guest more than 1 " + numberOfGuestsResults);
     }
 
 
@@ -139,3 +141,6 @@ function addTheTip() {
 }
 
 //Todo calculate tip if there is more than 1 person tip / people 15 / 2 = 7.50
+function splitTheBill() {
+
+}
