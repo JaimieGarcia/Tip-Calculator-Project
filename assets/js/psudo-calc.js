@@ -1,3 +1,20 @@
+//! GET USER INPUTS FOR TOTAL, # OF GUESTS, TIP %
+
+// Bill Total Input
+var totalInputBox = document.getElementById('billTotalInput');
+// Number of guests input
+var numberOfGuests = document.getElementById('billTotalInput');
+//  Tip Button input
+
+
+//! DO MATH STUFF
+
+
+//! DISPLAY MATH IN THE OUTPUT AREAS 
+
+
+
+
 document.querySelector('#tip-form').onchange = () => {
 
     // get total from total input

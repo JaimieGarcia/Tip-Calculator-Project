@@ -14,13 +14,13 @@ document.querySelector('#tip-form').onchange = function(){
 //! Event listners
 
 //Bill Total 
-// let totalInputBox = document.getElementById('billTotalInput');
+ let totalInputBox = document.getElementById('billTotalInput');
 
-// totalInputBox.onchange = function () {
-//     document.getElementById('billTotalOutput').innerHTML = "$" + totalInputBox.value;
+ totalInputBox.onchange = function () {
+     document.getElementById('billTotalOutput').innerHTML = "$" + totalInputBox.value;
 
 
-// }
+ }
 
 
 
@@ -30,14 +30,14 @@ document.querySelector('#tip-form').onchange = function(){
 //! Functions
 // gets the total from the input displays it on the page
 // imedietly resets 
-// const input = document.querySelector('input');
-// const totalBillWithTip = document.getElementById('totalBillWithTip');
+const input = document.querySelector('input');
+const totalBillWithTip = document.getElementById('totalBillWithTip');
 
-// input.addEventListener('change', updateValue);
+input.addEventListener('change', updateValue);
 
-// function updateValue(e) {
-//     totalBillWithTip.textContent = e.target.value;
-// }
+function updateValue(e) {
+    totalBillWithTip.textContent = e.target.value;
+}
 
 
 
