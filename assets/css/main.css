@@ -29,13 +29,50 @@ hr {
     color: #E6DDC6; 
 }
 
-/* Tip Amount  */
-#tipAmount {
+#billTotalOutput {
     background-color: #FEF7DC;
+    border: 0.1px solid #A19882;
+    border-radius: 4px;
+    padding: 4px 0px 4px 0px;
+}
+
+/* Number of guests output */
+#tipPercentOutput {
+    background-color: #FEF7DC;
+    border: 0.1px solid #A19882;
+    border-radius: 4px;
+    padding: 4px 0px 4px 0px;
+} 
+
+/* Tip Amount  */
+#tipAmountOutput {
+    background-color: #FEF7DC;
+    border: 0.1px solid #A19882;
+    border-radius: 4px;
+    padding: 4px 0px 4px 0px;
 }
 
 /* Total Bill with Tip */
 #totalBillWithTip {
     background-color: #FEF7DC;
+    border: 0.1px solid #A19882;
+    border-radius: 4px;
+    padding: 4px 0px 4px 0px;
 } 
+
+/* Number of guests output */
+#numOfGuestsOutput {
+    background-color: #FEF7DC;
+    border: 0.1px solid #A19882;
+    border-radius: 4px;
+    padding: 4px 0px 4px 0px;
+} 
+
+.vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+  
+    display: flex;
+    align-items: center;
+  }
 

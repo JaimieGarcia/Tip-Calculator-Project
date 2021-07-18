@@ -1,88 +1,146 @@
-console.log("Is this working");
+//! GET USER INPUTS FOR TOTAL, # OF GUESTS, TIP %
 
-//these shoudl be the user inputs for the front end form stuff
-let numberOfGuests = 4;
-let gratuity = 20;
-let billAmount = 100;
-//let billAmount = document.getElementById("billTotal").value;
+// Bill Total Input
+let totalInputBox = document.getElementById('billTotalInput');
+// Number of guests input
+let guestInputBox = document.getElementById('numOfGuestsInput');
+//  Tip Button input
+let tipButtonResult = document.getElementById('tipPercentOutput');
+document.getElementById('tipPercentOutput').innerHTML = "15%";
+
+// outputs
+let totalTipBox = document.getElementById('tipAmountOutput');
+
+let totalOutputBox = document.getElementById('totalBillWithTip');
 
 
-// gets the total from the input displays it on the page
-// imedietly resets 
-const input = document.querySelector('input');
-const totalBillWithTip = document.getElementById('totalBillWithTip');
 
-input.addEventListener('change', updateValue);
 
-function updateValue(e) {
-    totalBillWithTip.textContent = e.target.value;
+var totalBillResults;
+var numberOfGuestsResults = 1;
+var tipValue = 0.15;
+var tipResults = 0.15;
+
+
+//! Functions for changiung the dom elements
+
+//* total bill 
+totalInputBox.onchange = () => {
+    //var totalBillResults;
+    document.getElementById('billTotalOutput').innerHTML = "$" + totalInputBox.value;
+    totalBillResults = totalInputBox.value;
+    console.log("local var totalBillResults " + totalBillResults);
+    //updateStuff()
+
+}
+//console.log("global var totalBillResults " + totalBillResults);
+
+
+
+
+//* Number of guests 
+
+guestInputBox.onchange = () => {
+    document.getElementById('numOfGuestsOutput').innerHTML = guestInputBox.value;
+    // if there is an value in the input 
+    if (guestInputBox.value === "") {
+        numberOfGuestsResults = 1;
+        console.log("should be just 1 guest " + numberOfGuestsResults);
+        
+    }
+    //if more than 1
+    else {
+        //guestInputBox = 1;
+        numberOfGuestsResults = guestInputBox.value;
+        console.log("should list out guest more than 1 " + numberOfGuestsResults);
+    }
+
+
+    //updateStuff()
+    console.log("Number of guests: " + guestInputBox.value);
+    console.log("local var numberOfGuests " + numberOfGuestsResults);
+}
+//console.log("local var numberOfGuests " + numberOfGuests);
+
+//* Tip Buttons
+document.body.addEventListener('change', (e) => {
+    let target = e.target;
+    let message = "15%";
+    var tipResults;
+    switch (target.id) {
+        case '20per':
+            message = '20%';
+            tipValue = 0.20;
+            break;
+        case '15per':
+            message = '15%';
+            tipValue = 0.15;
+            break;
+        case '10per':
+            message = '10%';
+            tipValue = 0.10;
+            break;
+    }
+    tipResults = tipValue;
+    updateStuff()
+    mathTime()
+    addTheTip()
+    document.getElementById('tipPercentOutput').innerHTML = message;
+    console.log("test3 message " + message);
+    console.log("var tipValue " + tipValue);
+    console.log("var tipResults " + tipResults);
+});
+
+
+function updateStuff() {
+
+    //Todo Log Results from the Total, Guests and Tip inputs
+    console.log("Bill Results " + totalBillResults);
+    console.log("Guest Results " + numberOfGuestsResults);
+    console.log("Tip Results " + tipResults);
+
+
 }
 
 
-// get bill total from form input
-function enterBill() {
-    let billAmount = document.getElementById("billAmountForm").value;
-    document.getElementById("bill-amount").innerHTML = billAmount;
-    //console.log("bill amount: " + billAmount);
-}
-
-// use the tip % and turn it into a decimal eg 20% = 0.2
-function setGratuityDecimal() {
-    return (gratuity / 100)
-}
-
-function gratuityPercent() {
-    return (setGratuityDecimal() * 100);
-}
 
 
-// figure out gratuity bill total x %decimal 
-function calculateGratuity() {
-    return (billAmount * setGratuityDecimal());
-}
+//Todo Log Results from the Total, Guests and Tip inputs
+//console.log("Bill Results " + totalBillResults);
+//console.log("Guest Results " + numberOfGuestsResults);
+//console.log("Tip Results " + tipResults);
 
-// 
-function totalWithGrat(amount) {
-    return calculateGratuity() + amount;
-}
 
-// split the total with tip by the 
-function peopleSplit() {
-    return (totalWithGrat(billAmount) / numberOfGuests);
+
+
+
+//Todo calculate tip amount  100 * 0.15
+function mathTime() {
+    console.log("var totalBillResults " + totalBillResults);
+    console.log("var tipResults " + tipResults);
+    totalTipBox = document.getElementById('tipAmountOutput');
+    console.log("MATH: Tip $" + totalBillResults * tipValue);
+    tipResults = totalBillResults * tipValue
+    document.getElementById('tipAmountOutput').innerHTML = "$" + totalBillResults * tipValue;
+    //console.log("calculate tip amount");
 }
 
 
-//! logging
-
-console.log("bill amount: " + billAmount);
-console.log("Thar be " + numberOfGuests + " guests");
-console.log("Gratuity(%) is: " + gratuityPercent() + "%");
-console.log("Gratuity(math stuff) is: " + setGratuityDecimal());
-console.log("Gratuity($) is: $" + calculateGratuity());
-console.log("Your total including gratuity is:" + totalWithGrat(billAmount));
-console.log("Split " + numberOfGuests + " ways is:" + peopleSplit());
 
 
 
-//! add stuff to the frontend
+//Todo calculate total + tip 100 + 15 = 115
+function addTheTip() {
+    console.log("calculate total + tip");
+    console.log(totalBillResults);
+    console.log("+");
+    console.log(tipResults);
+    console.log("MATH: Total + Tip" + '\n' + parseFloat(totalBillResults) + parseFloat(tipResults));
+    total = parseFloat(totalBillResults) + parseFloat(tipResults)
+    document.getElementById('totalBillWithTip').innerHTML = "$" + total;
+}
 
+//Todo calculate tip if there is more than 1 person tip / people 15 / 2 = 7.50
+function splitTheBill() {
 
-// Bill 
-//const billTotal = document.getElementById("bill-amount");
-//billTotal.innerHTML = billAmount;
-
-// gratuity percent %%% 
-//const tipPrecentage = document.getElementById("gratuity-percent");
-//tipPrecentage.innerHTML = gratuityPercent();
-
-// gratuity amount $$$ 
-const gratuityAmount = document.getElementById("tipAmount");
-gratuityAmount.innerHTML = calculateGratuity();
-
-//total with tip
-//const total = document.getElementById("totalBillWithTip");
-//total.innerHTML = totalWithGrat(billAmount);
-
-//total with tip split between party
-//const split = document.getElementById("guest-split");
-//split.innerHTML = peopleSplit();
+}
