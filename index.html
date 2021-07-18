@@ -29,7 +29,7 @@
                             <div class="">How much was the total? </div>
 
                             <div class="input-group">
-                                <input type="number" name="total" class="form-control text-center"
+                                <input type="number" name="total" min="1" class="form-control text-center"
                                     id="billTotalInput" />
                             </div>
 
@@ -43,7 +43,7 @@
                         <div class="">How many guests? </div>
 
                         <div class="input-group">
-                            <input type="number" class="form-control text-center" placeholder="1" id="numOfGuestsInput"
+                            <input type="number" class="form-control text-center" placeholder="1" min="1" id="numOfGuestsInput"
                                 name="Guests" />
                         </div>
 
@@ -87,7 +87,7 @@
                         </section>
                         <section>
                             <h6 class="input-group-addon">Total Guests:</h6>
-                            <div id="numOfGuestsOutput"># OF GUESTS</div>
+                            <div id="numOfGuestsOutput">1</div>
                         </section>
 
 
@@ -98,13 +98,13 @@
 
                         <section>
                             <h6 class="input-group-addon">Tip Amount:</h6>
-                            <div id="tipAmountOutput">TIP AMOUNT HERE</div>
+                            <div id="tipAmountOutput">$0.00</div>
                         </section>
 
                         <!-- Total Bill with Tip -->
                         <section>
                             <h6 class="input-group-addon">Total Bill with Tip: </h6>
-                            <div id="totalBillWithTip">TOTAL + TIP HERE</div>
+                            <div id="totalBillWithTip">$0.00</div>
                         </section>
                     </div>
                 </div>
