@@ -9,14 +9,19 @@ let tipButtonResult = document.getElementById('tipPercentOutput');
 document.getElementById('tipPercentOutput').innerHTML = "15%";
 
 
+var billAmount;
+var numberOfGuests;
+var tipValue;
+
 
 // total bill 
 totalInputBox.onchange = () => {
     document.getElementById('billTotalOutput').innerHTML = "$" + totalInputBox.value;
     console.log(totalInputBox.value);
-    billAmount = totalInputBox.value;
+    globalThis.billAmount = totalInputBox.value;
 }
 
+console.log("global billAmount" + billAmount);
 
 // Number of guests 
 
@@ -36,7 +41,7 @@ guestInputBox.onchange = () => {
     }
 
     console.log("Number of guests: " + guestInputBox.value);
-    console.log("test2" + numberOfGuests);
+    console.log("test2 " + numberOfGuests);
 }
 
 // Tip Buttons
@@ -48,65 +53,32 @@ document.body.addEventListener('change', (e) => {
     switch (target.id) {
         case '20per':
             message = '20%';
-            tipvalue = 0.20;
+            tipValue = 0.20;
             break;
         case '15per':
             message = '15%';
-            tipvalue = 0.15;
+            tipValue = 0.15;
             break;
         case '10per':
             message = '10%';
-            tipvalue = 0.10;
+            tipValue = 0.10;
             break;
     }
 
     document.getElementById('tipPercentOutput').innerHTML = message;
-    console.log("test3 " + message);
-
-
-
+    console.log("test3 message " + message);
 });
 
+console.log("test3 value " + tipValue);
+
+// calculate tip amount  100 * 0.15
+let totalTipBox = document.getElementById('tipAmountOutput');
+document.getElementById('tipAmountOutput').innerHTML = "$" + billAmount * tipValue;
+
+
+// calculate total + tip 100 + 15
+let totalOutputBox = document.getElementById('totalBillWithTip');
+document.getElementById('totalBillWithTip').innerHTML = 100 + tipValue;
 
 
 
-
-
-
-// document.querySelector('#tip-form').onchange = () => {
-
-//     // get total from total input
-//     var billAmount = Number(document.getElementById('billTotalInput').value);
-//     var tipPercent = 15;
-//     var numberOfGuests = 1;
-
-//     // get the value of the tip radios
-//     document.getElementById('tipButtons').onchange = () => {
-//         var radios = document.getElementsByName("btnradio");
-//         var selected = Array.from(radios).find(radio => radio.checked);
-//         console.log(selected.value);
-//         window.tipPercent = selected.value;
-//         //alert(selected.value);
-//     }
-
-//     var totalInputBox = document.getElementById('billTotalInput');
-//     totalInputBox.onkeyup = function () {
-//         document.getElementById('billTotalOutput').innerHTML = "$" + totalInputBox.value;
-//         billAmount = totalInputBox.value;
-//     }
-
-
-//     var tipValue = billAmount * (tipPercent / 100)
-//     var finalBill = billAmount + tipValue
-//     console.log("Bill Amount " + billAmount);
-//     console.log(tipPercent + "% Tip");
-//     // console.log("Total + Tip " + finalBill)
-
-
-
-
-// }
-
-
-
-//Show Results
