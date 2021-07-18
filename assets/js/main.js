@@ -36,7 +36,7 @@ totalInputBox.onchange = () => {
 guestInputBox.onchange = () => {
     document.getElementById('numOfGuestsOutput').innerHTML = guestInputBox.value;
     // if there is an value in the input 
-    if (guestInputBox.value === 1) {
+    if (guestInputBox.value <= 1) {
         //numberOfGuestsResults = 1;
         document.getElementById('tip-ammount-label').innerHTML = "Tip Amount:";
         console.log("should be just 1 guest: " + numberOfGuestsResults);
@@ -46,6 +46,7 @@ guestInputBox.onchange = () => {
     else {
         //guestInputBox = 1;
         numberOfGuestsResults = guestInputBox.value;
+        document.getElementById('tip-ammount-label').innerHTML = "Tip Amount Per Person:";
         console.log("should be more than 1: " + numberOfGuestsResults);
         splitTheBill()
     }
@@ -109,10 +110,6 @@ function splitTheBill() {
     document.getElementById('tipAmountOutput').innerHTML = "$" + splitTip;
 
 }
-devTime()
 
-// add to show totals and stuff for dev 
-function devTime() {
-    var dev = document.getElementsByClassName("dev");
-    dev.style.display = "block"
-}
+
+// add stuff for when the console is open 
