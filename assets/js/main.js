@@ -26,41 +26,32 @@ var tipResults = 0.15;
 
 //* total bill 
 totalInputBox.onchange = () => {
-    //var totalBillResults;
+
     document.getElementById('billTotalOutput').innerHTML = "$" + totalInputBox.value;
     totalBillResults = totalInputBox.value;
-    console.log("local var totalBillResults " + totalBillResults);
-    //updateStuff()
-
 }
-//console.log("global var totalBillResults " + totalBillResults);
-
-
-
 
 //* Number of guests 
 
 guestInputBox.onchange = () => {
     document.getElementById('numOfGuestsOutput').innerHTML = guestInputBox.value;
     // if there is an value in the input 
-    if (guestInputBox.value === "") {
-        numberOfGuestsResults = 1;
-        console.log("should be just 1 guest " + numberOfGuestsResults);
-        
+    if (guestInputBox.value === 1) {
+        //numberOfGuestsResults = 1;
+        document.getElementById('tip-ammount-label').innerHTML = "Tip Amount:";
+        console.log("should be just 1 guest: " + numberOfGuestsResults);
+
     }
     //if more than 1
     else {
         //guestInputBox = 1;
         numberOfGuestsResults = guestInputBox.value;
-        console.log("should list out guest more than 1 " + numberOfGuestsResults);
+        console.log("should be more than 1: " + numberOfGuestsResults);
+        splitTheBill()
     }
 
-
-    //updateStuff()
-    console.log("Number of guests: " + guestInputBox.value);
-    console.log("local var numberOfGuests " + numberOfGuestsResults);
 }
-//console.log("local var numberOfGuests " + numberOfGuests);
+
 
 //* Tip Buttons
 document.body.addEventListener('change', (e) => {
@@ -82,65 +73,46 @@ document.body.addEventListener('change', (e) => {
             break;
     }
     tipResults = tipValue;
-    updateStuff()
     mathTime()
     addTheTip()
     document.getElementById('tipPercentOutput').innerHTML = message;
-    console.log("test3 message " + message);
-    console.log("var tipValue " + tipValue);
-    console.log("var tipResults " + tipResults);
+
 });
-
-
-function updateStuff() {
-
-    //Todo Log Results from the Total, Guests and Tip inputs
-    console.log("Bill Results " + totalBillResults);
-    console.log("Guest Results " + numberOfGuestsResults);
-    console.log("Tip Results " + tipResults);
-
-
-}
-
-
-
-
-//Todo Log Results from the Total, Guests and Tip inputs
-//console.log("Bill Results " + totalBillResults);
-//console.log("Guest Results " + numberOfGuestsResults);
-//console.log("Tip Results " + tipResults);
-
-
-
 
 
 //Todo calculate tip amount  100 * 0.15
 function mathTime() {
-    console.log("var totalBillResults " + totalBillResults);
-    console.log("var tipResults " + tipResults);
     totalTipBox = document.getElementById('tipAmountOutput');
-    console.log("MATH: Tip $" + totalBillResults * tipValue);
+    //console.log("MATH: Tip $" + totalBillResults * tipValue);
     tipResults = totalBillResults * tipValue
     document.getElementById('tipAmountOutput').innerHTML = "$" + totalBillResults * tipValue;
     //console.log("calculate tip amount");
 }
 
 
-
-
-
 //Todo calculate total + tip 100 + 15 = 115
 function addTheTip() {
-    console.log("calculate total + tip");
-    console.log(totalBillResults);
-    console.log("+");
-    console.log(tipResults);
-    console.log("MATH: Total + Tip" + '\n' + parseFloat(totalBillResults) + parseFloat(tipResults));
     total = parseFloat(totalBillResults) + parseFloat(tipResults)
     document.getElementById('totalBillWithTip').innerHTML = "$" + total;
 }
 
+
 //Todo calculate tip if there is more than 1 person tip / people 15 / 2 = 7.50
 function splitTheBill() {
+    tip = parseFloat(tipResults);
+    splitTip = tip / numberOfGuestsResults;
+    console.log("calculate  tip  / num of people ");
+    console.log("Tip Before " + tip);
+    console.log("Tip Split by " + numberOfGuestsResults + ": " + splitTip);
+    console.log("Tip Per Person " + splitTip);
+    document.getElementById('tip-ammount-label').innerHTML = "Tip Amount Per Person:";
+    document.getElementById('tipAmountOutput').innerHTML = "$" + splitTip;
 
+}
+devTime()
+
+// add to show totals and stuff for dev 
+function devTime() {
+    var dev = document.getElementsByClassName("dev");
+    dev.style.display = "block"
 }

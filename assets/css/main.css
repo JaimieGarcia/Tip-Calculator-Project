@@ -76,3 +76,6 @@ hr {
     align-items: center;
   }
 
+  .dev {
+      display: none;
+  }
