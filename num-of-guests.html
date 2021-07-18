@@ -23,14 +23,15 @@
             <div class="col-md-6 mx-auto">
                 <div class="card card-body text-center mt-6">
                     <section>
-                        <form id="total-form">
+                        <form id="total-form" onsubmit="return false">
                             <!-- How much was the total? -->
                             <div class="">How many guests? </div>
-                            <form class="form-group">
-                                <div class="input-group">
-                                    <input type="number" name="total" class="form-control text-center" id="numOfGuestsInput"/>
-                                </div>
-                            </form>
+
+                            <div class="input-group">
+                                <input type="number" name="total" class="form-control text-center"
+                                    id="numOfGuestsInput" />
+                            </div>
+
                     </section>
 
 
@@ -43,7 +44,7 @@
                         <h5>Totals</h5>
                         <section>
                             <h6 class="input-group-addon">Total Guests:</h6>
-                            <h3 id="numOfGuestsOutput"># OF GUESTS</h3>
+                            <h3 id="numOfGuestsOutput">1</h3>
                         </section>
                     </div>
                 </div>
