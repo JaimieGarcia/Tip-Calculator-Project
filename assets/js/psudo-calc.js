@@ -1,23 +1,27 @@
 //! GET USER INPUTS FOR TOTAL, # OF GUESTS, TIP %
 
 // Bill Total Input
-var totalInputBox = document.getElementById('billTotalInput');
+let totalInputBox = document.getElementById('billTotalInput');
 // Number of guests input
-var guestInputBox = document.getElementById('numOfGuestsInput');
+let guestInputBox = document.getElementById('numOfGuestsInput');
 //  Tip Button input
+let tipButtonResult = document.getElementById('tipPercentOutput');
+document.getElementById('tipPercentOutput').innerHTML = "15%";
+
 
 
 // total bill 
 totalInputBox.onchange = () => {
     document.getElementById('billTotalOutput').innerHTML = "$" + totalInputBox.value;
     console.log(totalInputBox.value);
+    billAmount = totalInputBox.value;
 }
 
 
 // Number of guests 
 
 numberOfGuests = 1;
-console.log(numberOfGuests);
+console.log("test" + numberOfGuests);
 
 guestInputBox.onchange = () => {
     document.getElementById('numOfGuestsOutput').innerHTML = guestInputBox.value;
@@ -30,42 +34,39 @@ guestInputBox.onchange = () => {
         guestInputBox = 1;
         numberOfGuests = 1;
     }
-    
+
     console.log("Number of guests: " + guestInputBox.value);
-    console.log(numberOfGuests);
+    console.log("test2" + numberOfGuests);
 }
 
 // Tip Buttons
-let tipButtonResult = document.getElementById('tipPercentOutput');
-document.getElementById('tipPercentOutput').innerHTML = "15%";
 
-document.body.addEventListener('change',  (e) => {
+
+document.body.addEventListener('change', (e) => {
     let target = e.target;
-    let message;
+    let message = "15%";
     switch (target.id) {
         case '20per':
             message = '20%';
-            value = 20;
+            tipvalue = 0.20;
             break;
         case '15per':
             message = '15%';
-            value = 15;
+            tipvalue = 0.15;
             break;
         case '10per':
             message = '10%';
-            value = 10;
+            tipvalue = 0.10;
             break;
     }
-    document.getElementById('tipPercentOutput').innerHTML = value + "%";
-    console.log(message);
-    console.log(value);
+
+    document.getElementById('tipPercentOutput').innerHTML = message;
+    console.log("test3 " + message);
+
+
+
 });
 
-
-//! DO MATH STUFF
-
-
-//! DISPLAY MATH IN THE OUTPUT AREAS 
 
 
 
