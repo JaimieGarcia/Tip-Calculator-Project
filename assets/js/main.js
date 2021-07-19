@@ -86,7 +86,10 @@ function mathTime() {
     totalTipBox = document.getElementById('tipAmountOutput');
     //console.log("MATH: Tip $" + totalBillResults * tipValue);
     tipResults = totalBillResults * tipValue
-    document.getElementById('tipAmountOutput').innerHTML = "$" + totalBillResults * tipValue;
+    if (guestInputBox.value <= 1) {
+        document.getElementById('tipAmountOutput').innerHTML = "$" + totalBillResults * tipValue;
+
+    }
     //console.log("calculate tip amount");
 }
 
