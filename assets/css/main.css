@@ -79,4 +79,5 @@ hr {
   .dev {
       /* change this to show dev stuff */
       display: none;
+      /* display: block; */
   }
