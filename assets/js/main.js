@@ -96,7 +96,7 @@ function mathTime() {
     tipResults = totalBillResults * tipValue
     if (guestInputBox.value <= 1) {
         document.getElementById('tipAmountOutput').innerHTML = "$" + totalBillResults * tipValue;
-
+        document.getElementById('total-with-tip-label').innerHTML = "Total Bill with Tip:";
     } else {
         splitTotal = totalBillResults / numberOfGuestsResults;
         console.log("Split Total By " + numberOfGuestsResults + "= " + totalBillResults / numberOfGuestsResults);
