@@ -10,23 +10,17 @@ document.getElementById('tipPercentOutput').innerHTML = "15%";
 
 // outputs
 let totalTipBox = document.getElementById('tipAmountOutput');
-
 let totalOutputBox = document.getElementById('totalBillWithTip');
-
-
-
 
 var totalBillResults;
 var numberOfGuestsResults = 1;
 var tipValue = 0.15;
 var tipResults = 0.15;
 
-
 //! Functions for changiung the dom elements
 
 //* total bill 
 totalInputBox.onchange = () => {
-
     document.getElementById('billTotalOutput').innerHTML = "$" + totalInputBox.value;
     totalBillResults = totalInputBox.value;
 }
@@ -37,17 +31,12 @@ guestInputBox.onchange = () => {
     document.getElementById('numOfGuestsOutput').innerHTML = guestInputBox.value;
     // if there is an value in the input 
     if (guestInputBox.value <= 1) {
-        //numberOfGuestsResults = 1;
         document.getElementById('tip-ammount-label').innerHTML = "Tip Amount:";
-        console.log("should be just 1 guest: " + numberOfGuestsResults);
-
     }
     //if more than 1
     else {
-        //guestInputBox = 1;
         numberOfGuestsResults = guestInputBox.value;
         document.getElementById('tip-ammount-label').innerHTML = "Tip Amount Per Person:";
-        console.log("should be more than 1: " + numberOfGuestsResults);
         splitTheBill()
     }
 
@@ -83,9 +72,7 @@ document.body.addEventListener('change', (e) => {
         mathTime()
         splitTheBill()
     }
-
     document.getElementById('tipPercentOutput').innerHTML = message;
-
 });
 
 
@@ -102,9 +89,6 @@ function mathTime() {
         console.log("Split Total By " + numberOfGuestsResults + "= " + totalBillResults / numberOfGuestsResults);
         //document.getElementById('tipAmountOutput').innerHTML = "$" + totalBillResults / numberOfGuestsResults;
         document.getElementById('total-with-tip-label').innerHTML = "Total Bill with Tip Split by " + numberOfGuestsResults + ":";
-        console.log("1 " + splitTotal);
-        console.log("2 " + splitTip);
-        console.log("MATH " + splitTotal + splitTip);
         document.getElementById('totalBillWithTip').innerHTML = "$" + (parseFloat(splitTotal) + parseFloat(splitTip));
     }
     //console.log("calculate tip amount");
@@ -122,17 +106,8 @@ function addTheTip() {
 function splitTheBill() {
     tip = parseFloat(tipResults);
     splitTip = tip / numberOfGuestsResults;
-    // calculation stuff
-    console.log("calculate  tip  / num of people ");
-    console.log("Tip Before " + tip);
-    console.log("Tip Split by " + numberOfGuestsResults + ": " + splitTip);
-    console.log("Tip Per Person " + splitTip);
-
     //change the tip output
     document.getElementById('tip-ammount-label').innerHTML = "Tip Amount Per Person:";
     document.getElementById('tipAmountOutput').innerHTML = "$" + splitTip;
-
 }
 
-
-// add stuff for when the console is open 
