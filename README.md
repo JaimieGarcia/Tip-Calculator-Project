@@ -1,6 +1,6 @@
 # Tip-Calculator-Project
 
-![screenshot](/img/tip-calculator.png)
+![screenshot](/assets/img/tip-calculator.png)
 
 Minimum requirements - Total bill, number of guests, and quality of service.
 
