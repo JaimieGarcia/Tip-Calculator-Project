@@ -1,8 +1,9 @@
-# Tip-Calculator-Project
+# Tip Calculator Project
 
 ![screenshot](/assets/img/tip-calculator.png)
 
-Minimum requirements - Total bill, number of guests, and quality of service.
+## About Project
+This is a group project to put together a tip calculating site using HTML CSS JavaScript
 
-[View Project](https://jaimiegarcia.github.io/Tip-Calculator-Project/
+[Live Demo](https://jaimiegarcia.github.io/Tip-Calculator-Project/
 )
